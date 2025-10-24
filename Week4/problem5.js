@@ -14,14 +14,17 @@ function reverseArray(arr) {
 
 function removeDuplicates(arr) {
     let newArray = [];
+    //set the first value since that cannot be a duplicate
     newArray[0] = arr[0];
+    //define check bool
     let isPresent = false;
     for ( let i = 1; i <= arr.length; i++) {
-        let indexCheck = 0;
+        //reset bool each loop
         isPresent = false;
-        for ( let k = 0; k < newArray.length; k++) {
-            
+        for ( let k = 0; k <= newArray.length; k++) {
+            //scan each index of the new array to make sure it doesnt have the value youre trying to add
             if (newArray[k] == arr[i]) {
+                //if its a dupe, set bool to true and end loop
                 isPresent = true;
                 break;
             }
@@ -32,9 +35,11 @@ function removeDuplicates(arr) {
             
         }
         if (isPresent) {
+            //if theres a dupe, reset bool and check the next value
             continue
         }
         else {
+            //if its not a dupe, add it to the new array
             newArray[newArray.length] = arr[i];
         }
     }
@@ -42,11 +47,69 @@ function removeDuplicates(arr) {
 }
 
 function rotateArray(arr, positions) {
-
+    let newArray = [];
+    let timesShifted = 0;
+    let rotated = "";
+    //check to see if its rotated at all
+    if (positions > arr.length) {
+        rotated = " (" + positions + " % " + arr.length + " = ";
+        //calculate new shift
+        positions = positions % arr.length;
+        if (positions > 1) {
+            //check whether it should be with an S or not
+            rotated += positions + " rotations)"
+        }
+        else {
+            rotated += positions + " rotation)"
+        }
+    }
+    for ( let i = 0; i < arr.length; i++) {
+        if ((i + positions) >= arr.length) {
+            //check if the newArray index needs to overflow back to the start
+            newArray[timesShifted] = arr[i];
+            //add to the counter to keep shifting over
+            timesShifted++;
+        }
+        else {
+            //normal placement
+            newArray[i + positions] = arr[i];
+        }
+    }
+    if (rotated != "") {
+        //return rotation info if present
+        return newArray + rotated; 
+    }
+    else {
+        return newArray;
+    }
 }
 
 function findSecondLargest(numbers) {
+    let secondLargest = "";
+    let largest = numbers[0];
 
+    for ( let i = 1; i < numbers.length; i++) {
+        if (secondLargest != "" && numbers[i] < largest && numbers[i] > secondLargest){
+            secondLargest = numbers[i]; 
+            continue;
+        }
+        if (numbers[i] < largest) {
+            secondLargest = numbers[i]; 
+        }
+        else if (numbers[i] > largest) {
+            largest = numbers[i];
+            i = -1;
+        }
+        else {
+            continue;
+        }
+    }
+    if (secondLargest == "") {
+        return null;
+    }
+    else {
+        return secondLargest;
+    }
 }
 
 
