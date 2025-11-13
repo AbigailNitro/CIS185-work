@@ -40,12 +40,12 @@ body {
     max-width: 100%;
 }
 
-header { grid-area: header; background-color: rgb(10, 10, 10); border-color: yellow; padding: 1vh; border-radius: 6px; border-style: outset;}
-starL { grid-area: starL; background-color: darkmagenta;  padding: 0px;}
-starR { grid-area: starR; background-color: darkmagenta;  padding: 0px;}
-starbar { grid-area: starbar; background-color: darkmagenta; padding: 0px;}
-main { grid-area: main; background-color: rgb(10, 10, 10); border-color: yellow; padding: 6px; border-radius: 6px; border-style: outset; border-bottom: 0px;}
-footer { grid-area: footer; background-color: rgb(10, 10, 10); border-color: yellow; padding: 6px; border-radius: 6px; border-style: outset;}
+header { grid-area: header; background-color: rgb(10, 10, 10); border-color: yellow; padding: 1vh; border-radius: 6px; border-style: solid;}
+starL { grid-area: starL; background-color: rgb(40, 4, 56);  padding: 0px;}
+starR { grid-area: starR; background-color: rgb(40, 4, 56);  padding: 0px;}
+starbar { grid-area: starbar; background-color: rgb(40, 4, 56); padding: 0px;}
+main { grid-area: main; background-color: rgb(10, 10, 10); border-color: yellow; padding: 6px; border-radius: 6px; border-style: solid; border-bottom: 0px;}
+footer { grid-area: footer; background-color: rgb(10, 10, 10); border-color: yellow; padding: 6px; border-radius: 6px; border-style: solid;}
 
 
 
@@ -162,8 +162,6 @@ main a {
     "card emptycard page";
     grid-template-columns: auto 300px auto;
     grid-template-rows: auto auto;
-
-
 }
 
 card { grid-area: card; padding:2px; max-width: fit-content;}
@@ -182,3 +180,20 @@ page { grid-area: page; padding:2px;}
     display: block;
     align-items: end;
 }
+
+.grid-info {
+    display:grid;
+
+    grid-template-areas: 
+    "LSpace SlideShow RSpace"
+    "info info info";
+
+    grid-template-columns: 125px auto 125px;
+
+    grid-template-rows: auto auto;
+}
+lspace { grid-area: lspace; padding:2px;}
+slideshow { grid-area: slideshow; padding:2px;}
+rspace { grid-area: rspace; padding:2px;}
+info { grid-area: info; padding:2px;}
+
