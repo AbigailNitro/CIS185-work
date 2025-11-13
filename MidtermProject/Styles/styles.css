@@ -45,7 +45,7 @@ starL { grid-area: starL; background-color: rgb(40, 4, 56);  padding: 0px;}
 starR { grid-area: starR; background-color: rgb(40, 4, 56);  padding: 0px;}
 starbar { grid-area: starbar; background-color: rgb(40, 4, 56); padding: 0px;}
 main { grid-area: main; background-color: rgb(10, 10, 10); border-color: yellow; padding: 6px; border-radius: 6px; border-style: solid; border-bottom: 0px;}
-footer { grid-area: footer; background-color: rgb(10, 10, 10); border-color: yellow; padding: 6px; border-radius: 6px; border-style: solid;}
+footer { grid-area: footer; background-color: rgb(10, 10, 10); border-color: yellow; padding: 1vh; padding-left: 2vh; border-radius: 6px; border-style: solid; }
 
 
 
@@ -73,6 +73,15 @@ nav { grid-area: nav; padding:2px; align-content: flex-end;}
     padding: 6px;
     padding-left: 8px;
 }
+main p {
+    margin-left: 15vh;
+    margin-right: 15vh;
+}
+main h2 {
+    margin-left: 15vh;
+    margin-right: 15vh;
+}
+
 main a {
     background-color: black;
     color: white;
@@ -82,6 +91,20 @@ main a {
     border-color: yellow;
     padding: 6px;
     padding-left: 8px;
+}
+main a:hover {
+    background-color: yellow;
+    color: black;
+}
+footer a {
+    font-size: 24px;
+    color: yellow;
+    margin-left: 1vh;
+    margin: .5vh;
+}
+footer a:hover {
+    background-color: yellow;
+    color: black;
 }
 .dropbtn {
     background-color: black;
