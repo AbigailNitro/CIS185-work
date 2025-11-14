@@ -51,7 +51,7 @@ html>CSS>Responsive>polish>JS>final details
 
         ## 7. AI Tools Used
         I used chatGPT one time to check a problem i was having with the grid box, turns out
-        I messed up on the quotes, thats it.
+        I messed up on the quotes. google ai gave me the syntax for fs.existsSync.
 
         ## 8. Future Improvements
         Finish all the character pages.
