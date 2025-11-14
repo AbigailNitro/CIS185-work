@@ -70,7 +70,7 @@ function favChar() {
             answer = "As long as we don't give up, we can save them all.";
             break;
         case "Bacon":
-            answer = "Hey everybody... it's your favorite boy...";
+            answer = "That's right everybody... it's your favorite boy...";
             break;
         case "/01":
             answer = "DO NOT LET AQUA FIND OUT!!!";
@@ -95,6 +95,9 @@ function favChar() {
             break;
         case "The Lunch Machine":
             answer = "I'm guessing you're a joe addict...";
+            break;
+        case "Cup":
+            answer = "YOU GET IT!!!";
             break;
         default:
             answer = "Character not recognized! Please don't forget the numbers and capitalization!";
