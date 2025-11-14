@@ -1,3 +1,36 @@
+/*stars! */
+body::before {
+    content: "⭐‎ ‎ ‎ ‎ ‎ ‎ ⭐‎ ‎ ‎ ‎ ‎ ‎ ⭐‎ ‎ ‎ ‎ ‎ ‎ ⭐";
+    position: fixed;
+    font-size: 3em;
+    opacity:0.9;
+    animation: fall 12s infinite linear;
+    top: -50px;
+    left: 1%;
+    z-index: -0;
+    animation-delay: -2s;
+}
+body::after {
+    content: "⭐‎ ‎ ‎ ‎ ‎ ‎ ⭐‎ ‎ ‎ ‎ ‎ ‎ ⭐‎ ‎ ‎ ‎ ‎ ‎ ⭐";
+    position: fixed;
+    font-size: 3em;
+    opacity:0.9;
+    animation: fall 12s infinite linear;
+    top: -50px;
+    left: -25%;
+    z-index: -0;
+    animation-delay: -6s;
+}
+@keyframes fall {
+0% {transform: translateY(0) rotate(0deg);}
+100% {transform: translateY(2200%) rotate(360deg); opacity: 0.2;}
+}
+
+
+
+
+
+
 h1 {
     color:yellow;
     white-space: nowrap;
@@ -34,18 +67,18 @@ body {
 
     min-height: 100vh;
     gap: 0px;
-    background-color: darkmagenta;
+    background-color: rgb(40, 4, 56);
 }
 .flex-category img {
     max-width: 100%;
 }
 
-header { grid-area: header; background-color: rgb(10, 10, 10); border-color: yellow; padding: 1vh; border-radius: 6px; border-style: solid;}
-starL { grid-area: starL; background-color: rgb(40, 4, 56);  padding: 0px;}
-starR { grid-area: starR; background-color: rgb(40, 4, 56);  padding: 0px;}
-starbar { grid-area: starbar; background-color: rgb(40, 4, 56); padding: 0px;}
-main { grid-area: main; background-color: rgb(10, 10, 10); border-color: yellow; padding: 6px; border-radius: 6px; border-style: solid; border-bottom: 0px;}
-footer { grid-area: footer; background-color: rgb(10, 10, 10); border-color: yellow; padding: 1vh; padding-left: 2vh; border-radius: 6px; border-style: solid; }
+header { grid-area: header; background-color: rgb(10, 10, 10); border-color: yellow; padding: 1vh; border-radius: 6px; border-style: solid; z-index: 1;}
+starL { grid-area: starL; background-color: rgb(40, 4, 56);  padding: 0px;z-index: -1;}
+starR { grid-area: starR; background-color: rgb(40, 4, 56);  padding: 0px;z-index: -1;}
+starbar { grid-area: starbar; background-color: rgb(40, 4, 56); padding: 0px; z-index: -1;}
+main { grid-area: main; background-color: rgb(10, 10, 10); border-color: yellow; padding: 6px; border-radius: 6px; border-style: solid; border-bottom: 0px; z-index: 1;}
+footer { grid-area: footer; background-color: rgb(10, 10, 10); border-color: yellow; padding: 1vh; padding-left: 2vh; border-radius: 6px; border-style: solid; z-index: 1; }
 
 
 
@@ -129,7 +162,7 @@ footer a:hover {
     border-style: solid;
     border-radius: 2px;
     min-width: 160px;
-    z-index: 1;
+    z-index: 2;
     color:white;
     right: 0px;
 }
@@ -159,6 +192,10 @@ footer a:hover {
     border-style: solid;
     margin: .5vh;
     padding: 6px;
+}
+.flex-category div p {
+    margin-left: 1vh;
+    margin-right: 1vh;
 }
 
 .flex-card {
