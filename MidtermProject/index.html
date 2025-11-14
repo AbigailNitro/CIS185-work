@@ -102,6 +102,23 @@
                 <br> <br> <br>
             </div>
         </div>
+        <br><br>
+        <h3>What's your favorite Salvage Labs character?</h3>
+        <br>
+        <form>
+        <label for="character">Write yours down here!</label>
+        <input type="text"
+        id="character"
+        name="character"
+        placeholder="Who oh who could it be...?">
+        <button type="button" onclick="favChar()">Submit Answer</button>
+        
+
+        <div id="formResult" style="display: none; justify-self: center; border-color: yellow; 
+        border-radius: 6px; border-style: solid; margin: 6px;">
+        <p id="comment"></p>
+        </div>
+    </form>
     </main>
     <starR>
     </starR>
@@ -111,5 +128,6 @@
         <a href="https://x.com/Shr00msi3">Shr00msie's account</a> <br>
     </footer>
 </div>
+<script src="question.js" defer></script>
 </body>
 </html>
