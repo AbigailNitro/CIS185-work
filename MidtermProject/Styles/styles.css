@@ -1,40 +1,168 @@
+html,body{
+margin:0;
+}
 /*stars! */
-body::before {
-    content: "⭐‎ ‎ ‎ ‎ ‎ ‎ ⭐‎ ‎ ‎ ‎ ‎ ‎ ⭐‎ ‎ ‎ ‎ ‎ ‎ ⭐";
+.star {
     position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+    @media screen and (max-width: 520px) {
+        display: none;
+    }
+}
+.starfall {
+    content: "⭐";
+    position: absolute;
     font-size: 3em;
     opacity:0.9;
-    animation: fall 12s infinite linear;
-    top: -50px;
-    left: 1%;
-    z-index: -0;
-    animation-delay: -2s;
+    animation: fall linear infinite;
+    top: -20vh;
+    z-index: 0;
+    overflow: hidden;
 }
-body::after {
-    content: "⭐‎ ‎ ‎ ‎ ‎ ‎ ⭐‎ ‎ ‎ ‎ ‎ ‎ ⭐‎ ‎ ‎ ‎ ‎ ‎ ⭐";
-    position: fixed;
-    font-size: 3em;
-    opacity:0.9;
-    animation: fall 12s infinite linear;
-    top: -50px;
-    left: -25%;
-    z-index: -0;
-    animation-delay: -6s;
-}
+
+
 @keyframes fall {
-0% {transform: translateY(0) rotate(0deg);}
-100% {transform: translateY(2200%) rotate(360deg); opacity: 0.2;}
+0% {transform: translateY(-20vh);}
+20% {opacity: 1; transform: translateY(18vh);}
+100% {transform: translateY(170vh); scale:0.7; opacity: 0.2;}
 }
 
 
+/*first batch-------------------------*/
+.starfall:nth-child(1) {
+left: 94vw;
+animation-duration: 12s;
+animation-delay: 2s;
+}
+.starfall:nth-child(2) {
+left: 89vw;
+animation-duration: 12s;
+animation-delay: 4s;
+}
+.starfall:nth-child(3) {
+left: 94vw;
+animation-duration: 12s;
+animation-delay: 6s;
+}
+.starfall:nth-child(4) {
+left: 89vw;
+animation-duration: 12s;
+animation-delay: 8s;
+}
+.starfall:nth-child(5) {
+left: 94vw;
+animation-duration: 12s;
+animation-delay: 10s;
+}
+.starfall:nth-child(6) {
+left: 89vw;
+animation-duration: 12s;
+animation-delay: 12s;
+}
+/*second batch-------------------------*/
+.starfall:nth-child(7) {
+left: 79vw;
+animation-duration: 12s;
+animation-delay: 1s;
+}
+.starfall:nth-child(8) {
+left: 72vw;
+animation-duration: 12s;
+animation-delay: 3s;
+}
+.starfall:nth-child(9) {
+left: 79vw;
+animation-duration: 12s;
+animation-delay: 5s;
+}
+.starfall:nth-child(10) {
+left: 72vw;
+animation-duration: 12s;
+animation-delay: 7s;
+}
+.starfall:nth-child(11) {
+left: 79vw;
+animation-duration: 12s;
+animation-delay: 9s;
+}
+.starfall:nth-child(12) {
+left: 72vw;
+animation-duration: 12s;
+animation-delay: 11s;
+}
 
-
+.starfall:nth-child(13) {
+left: 1vw;
+animation-duration: 12s;
+animation-delay: 2s;
+}
+.starfall:nth-child(14) {
+left: 6vw;
+animation-duration: 12s;
+animation-delay: 4s;
+}
+.starfall:nth-child(15) {
+left: 1vw;
+animation-duration: 12s;
+animation-delay: 6s;
+}
+.starfall:nth-child(16) {
+left: 6vw;
+animation-duration: 12s;
+animation-delay: 8s;
+}
+.starfall:nth-child(17) {
+left: 1vw;
+animation-duration: 12s;
+animation-delay: 10s;
+}
+.starfall:nth-child(18) {
+left: 6vw;
+animation-duration: 12s;
+animation-delay: 12s;
+}
+/*second batch-------------------------*/
+.starfall:nth-child(19) {
+left: 16vw;
+animation-duration: 12s;
+animation-delay: 1s;
+}
+.starfall:nth-child(20) {
+left: 21vw;
+animation-duration: 12s;
+animation-delay: 3s;
+}
+.starfall:nth-child(21) {
+left: 16vw;
+animation-duration: 12s;
+animation-delay: 5s;
+}
+.starfall:nth-child(22) {
+left: 21vw;
+animation-duration: 12s;
+animation-delay: 7s;
+}
+.starfall:nth-child(23) {
+left: 16vw;
+animation-duration: 12s;
+animation-delay: 9s;
+}
+.starfall:nth-child(24) {
+left: 21vw;
+animation-duration: 12s;
+animation-delay: 11s;
+}
 
 
 h1 {
     color:yellow;
     white-space: nowrap;
-    font-size: 4em;
+    font-size: 6vmax;
     margin: 0%;
 }
 h1 a {
@@ -45,9 +173,38 @@ h1 a {
     margin: inherit;
     text-decoration: inherit;
 }
+h2 {
+   @media screen and (max-width: 520px) {
+        margin-top: 4px;
+        margin-bottom: 4px;
+    }
+    @media screen and (min-width: 768px) {
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+    @media screen and (min-width: 1024px) {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }  
+} 
 h3 {
     color: white;
+    font-size: 1.46vmax;
 }
+p {
+   @media screen and (max-width: 520px) {
+        margin-top: 4px;
+        margin-bottom: 4px;
+    }
+    @media screen and (min-width: 768px) {
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+    @media screen and (min-width: 1024px) {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }  
+} 
 body {
     color: white;
     margin: 0px;
@@ -61,7 +218,17 @@ body {
     "starl main starr"
     "footer footer footer";
     justify-content: space-between;
-    grid-template-columns: 15vh auto 15vh;
+    grid-template-columns: 0vw auto 0vw;
+
+    @media screen and (max-width: 520px) {
+        grid-template-columns: 3vw auto 3vw;
+    }
+    @media screen and (min-width: 768px) {
+        grid-template-columns: 6vw auto 6vw;
+    }
+    @media screen and (min-width: 1024px) {
+        grid-template-columns: 10vw auto 10vw;
+    } 
 
     grid-template-rows: auto 15vh 1.1fr auto;
 
@@ -142,7 +309,16 @@ footer a:hover {
 .dropbtn {
     background-color: black;
     color:white;
-    font-size: 52px;
+    font-size: 18px;
+    @media screen and (max-width: 520px) {
+        display: none;
+    }
+    @media screen and (min-width: 768px) {
+        font-size: 30px;
+    }
+    @media screen and (min-width: 1024px) {
+        font-size: 50px;
+    } 
     border-style: solid;
     border-radius: 4px;
     border-color: yellow;
@@ -209,6 +385,24 @@ footer a:hover {
     align-items:stretch;
     align-content: space-around;
     justify-content: center;
+    @media screen and (max-width: 520px) {
+        margin-left:6px;
+        margin-right:6px;
+        margin-top:2px;
+        margin-bottom:2px;
+    }
+    @media screen and (min-width: 768px) {
+        margin-left:12px;
+        margin-right:12px;
+        margin-top:6px;
+        margin-bottom:6px;
+    }
+    @media screen and (min-width: 1024px) {
+        margin-left:20px;
+        margin-right:20px;
+        margin-top:10px;
+        margin-bottom:10px;
+    } 
 
 }
 .flex-card > div {
@@ -224,7 +418,7 @@ footer a:hover {
     grid-template-areas:
     "card emptycard text"
     "card emptycard page";
-    grid-template-columns: auto 300px 0.2fr;
+    grid-template-columns: auto 9vw 0.2fr;
     grid-template-rows: auto auto;
     align-items: center;
 }
